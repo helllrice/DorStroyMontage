@@ -1,0 +1,30 @@
+@import (reference) '../../less/variables.less';
+
+.drawer {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    
+    flex-grow: 1;
+
+    background-color: #2B2831;
+
+    @media (max-width: @screen-sm-max) {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        height: calc(100% - 56px);
+        padding-bottom: 20px;
+
+        position: fixed;
+        left: 0;
+        top: 56px;
+        z-index: 99;
+
+        overflow: auto;
+
+        &_active {
+            display: block;
+        }
+    }
+}

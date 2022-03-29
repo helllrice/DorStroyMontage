@@ -1,0 +1,26 @@
+@import (reference) '../../less/variables.less';
+
+.intro {
+    overflow: hidden;
+    position: relative;
+    z-index: 80;
+    height: 50%;
+    .intro__text {
+        width: 100%;
+        text-align: center;
+        background-color: rgba(0, 0, 0, .8);
+    }
+    .intro__video {
+        position: absolute;
+        min-width: 100%;
+        min-height: 100%;
+        z-index: -3;
+        top: 0;
+        left: 0;
+        background-size: cover;
+        object-fit: cover;
+    }
+}
+
+
+

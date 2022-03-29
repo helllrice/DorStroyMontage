@@ -1,0 +1,75 @@
+@import (reference) '../../less/variables.less';
+
+.about {
+    padding: 88px 0;
+    &__container {
+        .about__box {
+            display: flex;
+            justify-content: space-between;
+            .about__item {
+                .about__title {
+                    font-size: 32px;
+                    z-index: 50;
+                    position: relative;
+                }
+                .about__title::after {
+                    width: 80px;
+                    height: 20px;
+                    background-color: #ffb71b;
+                    content: "";
+                    position: absolute;
+                    top: 10px;
+                    left: 0;
+                    z-index: -1;
+                }
+                .about__text {
+                    width: 576px;
+                    padding: 32px 0;
+                }
+            }
+            .about__item:nth-child(2) {
+                position: relative;
+                z-index: -1;
+                .about__img {
+                    -webkit-filter: brightness(40%);
+                    filter: brightness(40%);
+                }
+                .about__img-logo {
+                    position: absolute;
+                    display: flex;
+                    width: 658px;
+                    top: 20%;
+                    left: 10%;
+                    z-index: 99;
+                    .about-logo {
+                        fill: #ffb71b;
+                    }
+                    h2 {
+                        padding-left: 10px;
+                        padding-top: 60px;
+                        font-size: 56px;
+                        color: #ffff;
+                    }
+                }
+                
+            }
+        }
+    } 
+}
+
+@media (max-width: @screen-sm-max) {
+    .about__item {
+        .about__title {
+            font-size: 16px;
+        }
+        .about__text {
+            padding:24px 15px !important;
+            width: 295px !important;
+            font-size: 16px;
+        }
+    }
+    .about__item:nth-child(2) {
+        display: none;
+    }
+    
+}

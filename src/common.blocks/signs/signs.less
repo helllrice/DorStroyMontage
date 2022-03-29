@@ -1,0 +1,60 @@
+@import (reference) '../../less/variables.less';
+
+.signs {
+    padding-top: 120px;
+    .signs__box {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        .signs__item {
+            margin: 10px 0;
+            padding: 88px 24px 32px;
+            width: 264px;
+            height: 168px;
+            background-color: #fff;
+            position: relative;
+            .sign-img {
+                width: 104px;
+                height: 104px;
+                position: absolute;
+                left: 50%;
+                top: -40px;
+                transform: translateX(-50%);
+            }
+            .sign--img {
+                width: 104px;
+                height: 104px;
+                position: absolute;
+                left: 50%;
+                top: -40px;
+                transform: translateX(-50%);
+                border: 6px solid #FFB71B;
+                background-color: #fff;
+                img {
+                    padding: 14px;
+                }
+            }
+            .signs__text {
+                font-weight: 700;
+                font-size: 16px;
+                line-height: 24px;
+                text-align: center;
+                color: #2b2831;
+            }
+        }
+        .signs__item:hover {
+            cursor: pointer;
+            background-color: #FFB71B;
+            transition: .6s;
+        }
+    }
+}
+
+@media (max-width: @screen-sm-max) {
+    .signs__box {
+        justify-content: center !important;
+        .signs__item {
+            margin: 40px 0 !important;
+        }
+    }
+}

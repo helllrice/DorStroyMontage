@@ -1,0 +1,206 @@
+@import (reference) '../../less/variables.less';
+
+.price-list {
+    position: relative;
+    margin-top: 88px;
+    margin-bottom: 144px;
+
+    &__container {
+        .price-list__title {
+            font-weight: 700;
+            font-size: 32px;
+            line-height: 40px;
+            position: relative;
+            z-index: 50;
+        }
+
+        .price-list__title::after {
+            width: 50px;
+            height: 20px;
+            background-color: #ffb71b;
+            content: "";
+            position: absolute;
+            top: 15px;
+            left: 0;
+            z-index: -1;
+        }
+
+        .price-list__text {
+            margin: 32px 0;
+            width: 936px;
+            color: #2B2831;
+            font-size: 16px;
+            line-height: 24px;
+        }
+
+        .price-list__table {
+            overflow: auto;
+
+            table {
+                width: 100%;
+                border-collapse: collapse;
+                border-spacing: 0;
+                text-align: center;
+
+                .table-tr {
+                    background-color: #2B2831;
+
+                    .table-td {
+                        font-weight: 700;
+                        padding: 10px 77px;
+                        color: #fff;
+                        text-decoration: underline;
+
+                    }
+                }
+
+                .table-tr:nth-child(3) {
+                    text-align: center;
+                    background-color: #fff;
+
+                    .table-td {
+                        border: 1px solid #F3F3F3;
+                        text-decoration: none;
+                        color: #13131D;
+                    }
+                }
+
+                .table-tr:nth-child(4) {
+                    text-align: center;
+                    background-color: #F3F3F3;
+
+                    .table-td {
+                        border: 1px solid #F3F3F3;
+                        text-decoration: none;
+                        color: #13131D;
+                    }
+                }
+
+                .table-tr:nth-child(5) {
+                    text-align: center;
+                    background-color: #Fff;
+
+                    .table-td {
+                        border: 1px solid #F3F3F3;
+                        text-decoration: none;
+                        color: #13131D;
+                    }
+                }
+
+                .table-tr:nth-child(6) {
+                    text-align: center;
+                    background-color: #F3F3F3;
+
+                    .table-td {
+                        border: 1px solid #F3F3F3;
+                        text-decoration: none;
+                        color: #13131D;
+                    }
+                }
+
+                .table-tr:nth-child(7) {
+                    text-align: center;
+                    background-color: #fff;
+
+                    .table-td {
+                        text-align: center;
+                        border: 1px solid #F3F3F3;
+                        text-decoration: none;
+                        color: #13131D;
+                    }
+                }
+
+                .table-tr:nth-child(8) {
+                    text-align: center;
+                    background-color: #F3F3F3;
+
+                    .table-td {
+                        width: 200px;
+                        text-align: center;
+                        border: 1px solid #F3F3F3;
+                        text-decoration: none;
+                        color: #13131D;
+                    }
+                }
+
+                .table-tr:nth-child(9) {
+                    text-align: center;
+                    background-color: #fff;
+
+                    .table-td {
+                        border: 1px solid #F3F3F3;
+                        text-decoration: none;
+                        color: #13131D;
+                    }
+                }
+            }
+        }
+
+        .price-list__box {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+
+            .price-list__btn {
+                margin: 32px 0;
+                background: #FFB71B;
+                border-radius: 20px;
+                width: 240px;
+                height: 40px;
+                font-weight: 700;
+                cursor: pointer;
+                border: none;
+            }
+
+            .price-list__link {
+                cursor: pointer;
+                text-decoration: underline;
+            }
+
+            .svg-xlsx {
+                margin-right: 10px;
+                width: 21px;
+                height: 24px;
+                fill: #219653;
+                position: absolute;
+                top: 80%;
+                left: 44.3%;
+            }
+        }
+
+        .price-list__caption {
+            width: 604px;
+            font-size: 96px;
+            line-height: 100px;
+            color: #858585;
+            mix-blend-mode: normal;
+            opacity: 10%;
+            transform: rotate(90deg);
+            top: 35%;
+            left: 75%;
+            position: absolute;
+        }
+    }
+}
+
+@media (max-width: @screen-sm-max) {
+    .price-list__text {
+        margin: 32px 0;
+        width: 280px !important;
+        color: #2B2831;
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .price-list__caption {
+        display: none;
+    }
+
+    .svg-xlsx {
+        position: absolute;
+        top: 80%;
+        left: 17% !important;
+    }
+}

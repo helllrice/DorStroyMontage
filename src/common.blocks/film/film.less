@@ -1,0 +1,66 @@
+@import (reference) '../../less/variables.less';
+
+.film {
+    padding: 88px 0;
+    .film__container {
+        .film__box {
+            display: flex;
+            justify-content: center;
+            .film__item:nth-child(1) {
+                padding: 0 144px;
+            }
+            .film__item:nth-child(2) {
+                padding-top: 100px;
+                width: 582px;
+                .film__title {
+                    font-size: 32px;
+                    position: relative;
+                }
+                .film__title::after {
+                    width: 80px;
+                    height: 20px;
+                    background-color: #ffb71b;
+                    content: "";
+                    position: absolute;
+                    top: 10px;
+                    left: 0;
+                    z-index: -1;
+                }
+                .film__text {
+                    padding: 32px 0;
+                }
+                .film__link {
+                    text-decoration: underline;
+                }
+            }
+        }
+        
+    }
+}
+
+@media (max-width: @screen-sm-max) {
+    
+    
+    .film__item:nth-child(1) {
+        display: none;
+    }
+    .film__item:nth-child(2) {
+       padding: 0 !important;
+       .film__title {
+           font-size: 16px !important;
+       }
+       .film__title::after {
+        width: 55px !important;
+        height: 15px !important;
+        background-color: #ffb71b;
+        content: "";
+        position: absolute;
+        top: 10px;
+        left: 0;
+        z-index: -1;
+    }
+       .film__text {
+           font-size: 14px !important;
+       }
+    }
+}

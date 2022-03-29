@@ -1,0 +1,103 @@
+@import (reference) '../../less/variables.less';
+
+.menu {
+    @media (max-width: @screen-sm-max) {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+.menu__list {
+    display: flex;
+    padding: 0 40px 0 15px;
+    color: #fff;
+    list-style: none;
+
+    @media (max-width: @screen-sm-max) {
+        flex-direction: column;
+        padding: 0 15px;
+    }
+
+    .list-item {
+        position: relative;
+        margin-left: 20px;
+
+        @media (max-width: @screen-sm-max) {
+            margin-left: 0;
+            padding: 10px 0;
+        }
+    }
+
+    /*
+    .list-item:nth-child(1):hover {
+        border-bottom: solid #FFB71B 4px;
+    }
+    */
+    
+    .list-item:nth-child(1):hover .menu__sub-list{
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+        transition-delay: 0s;
+    }
+
+    .menu__sub-list {
+        height: 190px;
+        margin-top: 30px;
+        min-width: 392px;
+
+        background-color: #2B2831;
+        list-style: none;
+
+        position: absolute;
+        top: 100%;
+        right: 0;
+        left: 0;
+        z-index: 90;
+
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(20px);
+        transition: visibility 0.3s, opacity 0.3s, transform 0.3s;
+        transition-delay: 0.3s;
+
+        @media (max-width: @screen-sm-max) {
+            display: none;
+            height: auto;
+            margin-top: 0;
+            min-width: 0;
+            width: 100%;
+
+            position: static;
+
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+
+            &_active {
+                display: block;
+            }
+        }
+
+        .sub-list-item {
+            padding: 6px 16px 6px 20px;
+
+            .menu__sub-link:hover {
+                color: #FFB71B;
+                transition: .3s;
+            }
+        }
+
+        .sub-list-item:hover {
+            background-color: #3A3A47;
+            transition: .3s;
+        }
+    }
+}
+
+.svg-arrow {
+    width: 12px;
+    height: 7px;
+    margin-bottom: 3px;
+    margin-left: 3px;
+}

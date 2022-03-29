@@ -1,0 +1,76 @@
+@import (reference) '../../less/variables.less';
+
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 99;
+
+    background-color: #2B2831;
+
+    &__container {
+        display: flex;
+        align-items: center;
+        padding: 0 20px;
+        height: 80px;
+
+        @media (max-width: @screen-sm-max) {
+            height: 56px;
+        }
+    }
+
+    &__text {
+        color: #fff;
+        text-transform: uppercase;
+
+        @media (max-width: @screen-sm-max) {
+            color: #fff;
+            text-transform: uppercase;
+            font-size: 11px;
+        }
+    }
+
+    &__info {
+        display: flex;
+        align-items: center;
+        color: #fff;
+        margin-left: auto;
+
+        @media (max-width: @screen-sm-max) {
+            flex-direction: column;
+            align-items: flex-start;
+            margin-left: 0;
+            padding: 0 15px;
+            width: 100%;
+        }
+    }
+
+    &__price {
+        @media (max-width: @screen-sm-max) {
+            margin-bottom: 15px;
+        }
+    }
+
+    &__contacts {
+        margin-left: 64px;
+
+        @media (max-width: @screen-sm-max) {
+            margin-left: 0;
+        }
+    }
+
+    &__burger {
+        margin-left: auto;
+    }
+}
+
+@media (max-width: @screen-sm-max) {
+    .container {
+        width: 100%;
+    }
+
+    .header__text {
+        color: #fff;
+        text-transform: uppercase;
+        font-size: 11px;
+    }
+}

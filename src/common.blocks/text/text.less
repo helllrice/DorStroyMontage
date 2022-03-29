@@ -1,0 +1,51 @@
+@import (reference) '../../less/variables.less';
+
+.text {
+    margin: 0 auto;
+    .text__title {
+        padding-top: 168px;
+        font-size: 47px;
+        height: 200px;
+        color: #fff;
+        line-height: 50px;
+        span {
+            color: #FFB71B;
+        }
+    }
+    .text__body {
+        padding-top: 150px;
+        font-size: 16px;
+        color: #fff;
+    }
+    .text__btn {
+        width: 150px;
+        height: 40px;
+        margin-top: 48px;
+        margin-bottom: 220px;
+        border-radius:20px;
+        font-size: 12px;
+        background-color: #FFB71B;
+        border: none;
+        cursor: pointer;
+        font-weight: bold;
+        text-transform: uppercase;
+        padding: 3px;
+    }
+}
+
+@media (max-width: @screen-sm-max) {
+    .text__title {
+        padding: 25px 10px !important;
+        font-size: 28px !important;
+        line-height: 32px !important;
+        height: 10px !important;
+    }
+    .text__body{
+        padding: 20px 0;
+        font-size: 14px !important;
+    }
+    .text__btn {
+        margin-top: 38px !important;
+        margin-bottom: 150px !important;
+    }
+}

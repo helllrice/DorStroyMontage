@@ -1,0 +1,47 @@
+@import (reference) '../../less/variables.less';
+
+.burger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 24px;
+    height: 16px;
+
+    background: none;
+    border: none;
+    cursor: pointer;
+
+    &::before,
+    span,
+    &::after {
+        display: block;
+        width: 100%;
+        height: 2px;
+
+        background-color: #fff;
+    }
+
+    &::before,
+    &::after {
+        content: "";
+    }
+
+    &_active {
+
+        &::before {
+            transform: translateY(7px) rotate(45deg);
+        }
+
+        span {
+            transform: scale(0);
+        }
+        
+        &::after {
+            transform: translateY(-7px) rotate(-45deg);
+        }
+    }
+
+    @media (max-width: @screen-sm-max) {
+        display: flex;
+    }
+}
